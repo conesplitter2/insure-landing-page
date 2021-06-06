@@ -3,7 +3,8 @@
   <div class="container-fluid">
 
     <a class="navbar-brand" href="#">
-      <img src="./assets/images/logo.svg" alt="Logo" style="padding-left: 70px">
+      <img src="./assets/images/logo.svg" alt="Logo" class="desktopTopLogo">
+      <img src="./assets/images/logo.svg" alt="Logo" class="mobileTopLogo">
     </a>
     <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="my-1 mx-2 close">
@@ -106,10 +107,12 @@
   </div>
 
 </div>
-<div class="bottomLogoSocial">
+<div class="wholeFooter">
+    <div class="bottomLogoSocial">
+      <img src="./assets/images/bg-pattern-footer-desktop.svg" alt="Footer Pattern" class="DesktopFooterOverlay ">
+      <img src="./assets/images/bg-pattern-footer-mobile.svg" alt="Footer Pattern" class="MobileFooterOverlay">
   <div class="bottomLogo">
-      <img src="./assets/images/logo.svg" alt="Logo">
-
+      <img src="./assets/images/logo.svg" alt="Logo" class="bottomLogo">
   </div>
   <div class="bottomSocial">
     <a href="" class="socialMediaIcon">
@@ -189,6 +192,8 @@
   </div>
 
 </div>
+</div>
+
 </template>
 
 <script>
@@ -275,7 +280,15 @@ h1, h2, h3, h4{
 }
 
 .navbar-nav{
-  margin-right: 130px;
+  margin-right: 137px;
+}
+.desktopTopLogo{
+  display: inline;
+  padding-left: 133px;
+}
+
+.mobileTopLogo{
+  display: none;
 }
 /* end of NavBar Desktop*/
 
@@ -306,6 +319,7 @@ h1, h2, h3, h4{
 }
 .topLeftTextArea{
   margin: 30% auto;
+  margin-left: 22%;
   position: relative;
   flex: 1;
 }
@@ -351,8 +365,8 @@ h1, h2, h3, h4{
 
 }
 .topRightImage{
-  margin-top: 19%;
-  margin-left: 4%;
+  margin-top: 16%;
+  margin-left: 0.01%;
   position: relative;
   visibility: visible;
 }
@@ -361,7 +375,7 @@ h1, h2, h3, h4{
 }
 .topRightOverlay{
   position: absolute;
-  top: -7%;
+  top: -10.1%;
   z-index: 900;
   right: 2px
 }
@@ -376,9 +390,10 @@ h1, h2, h3, h4{
 .middleSection{
   display: flex;
   flex-direction: column;
-  max-width: 1190px;
+  max-width: 1080px;
     
   margin: 0 auto;
+  margin-top: 5%;
 
 }
 
@@ -432,7 +447,7 @@ h1, h2, h3, h4{
   justify-content: space-between;
   margin: 2rem auto;
   background-color: hsl(256, 26%, 20%);
-  max-width: 1190px;
+  max-width: 1080px;
   min-height: 250px;
 
 }
@@ -479,21 +494,30 @@ h1, h2, h3, h4{
 .middleBoxOverlayMobile{
   display: none;
 }
+
+/* end of middle section Desktop */
+
+/* start of bottom section Desktop */
 .bottomLogoSocial{
   display: flex;
   justify-content: space-between;
   margin: auto;
-  max-width: 1190px;
-
+  max-width: 1080px;
+  position: relative;
 }
-/* end of middle section Desktop */
-
-/* start of bottom section Desktop */
-
 .bottomLogo{
   flex: 8;
+  position: relative;
 }
-
+.DesktopFooterOverlay {
+  display: inline;
+  position: absolute;
+  top: -240%;
+  left: -14.2%;
+}
+.MobileFooterOverlay{
+  display: none;
+}
 .bottomSocial{
     flex: 1;
     display: flex;
@@ -512,9 +536,15 @@ h1, h2, h3, h4{
 /* end of bottom section Desktop */
 
 /* start of footer section Desktop */
+.wholeFooter{
+  padding-top: 4.5%;
+  margin-top: 10%;
+  background-color: #fafafa;
+
+}
 
 .FooterLine{
-  max-width: 1190px;
+  max-width: 1080px;
   margin: auto;
   margin-top: 20px;
   background-color: gray;
@@ -523,8 +553,8 @@ h1, h2, h3, h4{
 .Footer{
   display: flex;
   justify-content: space-between;
-  max-width: 1190px;
-  margin: auto;
+  max-width: 950px;
+  margin-left: 12%;
   margin-top: 2%;
 
 }
@@ -610,7 +640,7 @@ h1, h2, h3, h4{
   .NavOverLay{
     display: inline;
     position: absolute;
-    top: 75%;
+    top: 73.7%;
     z-index: 900;
   }
    .navbar-collapse {
@@ -619,6 +649,15 @@ h1, h2, h3, h4{
   }
   .navbar-nav{
     margin: 0;
+  }
+
+  .desktopTopLogo{
+  display: none;
+  }
+
+  .mobileTopLogo{
+  display: inline;
+  padding-left: 5px;
   }
   /* end of navbar section mobile */
 
@@ -638,6 +677,9 @@ h1, h2, h3, h4{
 .topLeftLine{
     display: none;
 
+}
+.topLeftTextArea{
+  margin: 30% auto;
 }
 .topLeftTextBox{
   text-align: center;
@@ -776,19 +818,34 @@ h1, h2, h3, h4{
     align-items: center;
 }
 .bottomSocial{
-  margin-top: 5%;
+  margin-top: 10px;
   margin-bottom: 10%;
   align-items: center;
-  margin-left: -9%;
 }
 .socialMediaIcon{
   margin-right: 10%;
+  margin-top: 17px;
+
+}
+.DesktopFooterOverlay {
+  display: none;
+}
+.MobileFooterOverlay{
+  display: inline;
+  position: absolute;
+  top: -85px;
+}
+.bottomLogo{
+  margin-right: -10%
 }
 /* end of bottom section mobile */
 
 /* start of footer section mobile */
+.wholeFooter{
+  padding-top: 85px;
+}
 .Footer{
-      flex-direction: column;
+    flex-direction: column;
         text-align: center;
 
 }
@@ -797,6 +854,7 @@ h1, h2, h3, h4{
 }
 .FooterLine{
   margin: auto auto;
+  max-width: 80%;
 }
 
 .FooterTitle{
